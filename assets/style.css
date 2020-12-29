@@ -60,65 +60,33 @@ body {
   right: 0;
   bottom: 0;
   display: none;
-  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.92);
   z-index: 3;
 }
 .container .menu .menu-close {
   position: absolute;
-  top: 23px;
-  right: 16px;
+  top: 40px;
+  right: 30px;
   width: 18px;
   height: 18px;
   background-image: url("images/icons/icon-close.svg");
   background-size: cover;
-  cursor: pointer;
-  -o-transition: all 0.3s ease;
-  -ms-transform: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.container .menu .menu-close:hover {
-  -o-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-.container .menu .menu-close:active {
-  top: 24px;
 }
 .container .menu .menu-dialog {
   display: grid;
-  grid-template-columns: 238px;
-  grid-template-rows: repeat(2, 209px);
+  grid-template-columns: repeat(auto-fit, 238px);
+  justify-content: center;
+  width: 100%;
   gap: 14px;
 }
 .container .menu .menu-dialog .menu-dialog__btn {
+  height: 209px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   background-size: cover;
-  cursor: pointer;
-  -o-transition: all 0.3s ease;
-  -ms-transform: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.container .menu .menu-dialog .menu-dialog__btn:hover {
-  -o-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-.container .menu .menu-dialog .menu-dialog__btn:active {
-  position: relative;
-  top: 1px;
 }
 .container .menu .menu-dialog .menu-dialog__btn .menu-dialog__btn-icon {
   margin-right: 13px;
@@ -158,18 +126,12 @@ body {
   margin-top: 7px;
   max-width: 200px;
   width: 100%;
-  display: inline-block;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
 }
-.container .content .content-description .content-description__os {
-  display: inline-block;
-  font-size: 14px;
-  color: #85C808;
-}
-.container .content .content-description .content-description__os .content-description__os-icon {
+.container .content .content-description .content-description__icon {
   display: inline-block;
   margin: 0 4px;
   position: relative;
@@ -178,6 +140,10 @@ body {
   height: 12px;
   background-image: url("images/icons/green-logo-android.svg");
   background-size: cover;
+}
+.container .content .content-description .content-description__os {
+  font-size: 14px;
+  color: #85C808;
 }
 .container .form {
   margin-top: 32px;

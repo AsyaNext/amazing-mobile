@@ -28,47 +28,31 @@
     bottom: 0;
     //display: flex;
     display: none;
-    justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.92);
     z-index: 3;
     .menu-close {
       position: absolute;
-      top: 23px;
-      right: 16px;
+      top: 40px;
+      right: 30px;
       width: 18px;
       height: 18px;
       background-image: url("images/icons/icon-close.svg");
       background-size: cover;
-      cursor: pointer;
-      @include transition(all 0.3s ease);
-      &:hover {
-        @include transform(scale(1.05))
-      }
-      &:active {
-        top: 24px;
-      }
     }
     .menu-dialog {
       display: grid;
-      grid-template-columns: 238px;
-      grid-template-rows: repeat(2, 209px);
+      grid-template-columns: repeat(auto-fit, 238px);
+      justify-content: center;
+      width: 100%;
       gap: 14px;
       .menu-dialog__btn {
+        height: 209px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 6px;
         background-size: cover;
-        cursor: pointer;
-        @include transition(all 0.3s ease);
-        &:hover {
-          @include transform(scale(1.05))
-        }
-        &:active {
-          position: relative;
-          top: 1px;
-        }
         .menu-dialog__btn-icon {
           margin-right: 13px;
           width: 24px;
@@ -109,25 +93,23 @@
       margin-top: 7px;
       max-width: 200px;
       width: 100%;
-      display: inline-block;
       font-weight: 300;
       font-size: 14px;
       line-height: 21px;
       text-align: center;
-      .content-description__os {
+      .content-description__icon {
         display: inline-block;
+        margin: 0 4px;
+        position: relative;
+        top: 2px;
+        width: 10px;
+        height: 12px;
+        background-image: url("images/icons/green-logo-android.svg");
+        background-size: cover;
+      }
+      .content-description__os {
         font-size: 14px;
         color: #85C808;
-        .content-description__os-icon {
-          display: inline-block;
-          margin: 0 4px;
-          position: relative;
-          top: 2px;
-          width: 10px;
-          height: 12px;
-          background-image: url("images/icons/green-logo-android.svg");
-          background-size: cover;
-        }
       }
     }
   }
